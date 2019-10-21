@@ -1,10 +1,26 @@
 // sketch.js
-const grid = document.querySelector('#gridContainer');
+const container = document.querySelector('#gridContainer');
 
-for (i = 0; i < 16; i++) {
-	var div = document.createElement('div');
-	div.classList.add('gridSquare');
-	console.log(i);
-	grid.appendChild(div);
+function createGrid(x) {
+	for (rows = 0; rows < x; rows++) {
+		for (columns = 0; columns < x; columns++) {
+			var square = document.createElement('div');
+			square.classList.add('gridSquare');
+			var dynamicW = 30/x + "em";
+			var dynamicH = 30/x + "em";
+			square.style.width = dynamicW;
+			square.style.height = dynamicH;
+			container.appendChild(square);
+		}
+	}
 }
 
+createGrid(20);
+
+
+// TO DO:
+// figure out how to dynamically size squares in grid..
+// The *container* grid should be staying the same size, while the squares inside change width + height based on how many squares are being created *x*
+// currently the squares ignore the container and will outgrow their container
+// the squares are being given a calculated height and width based on the amount of squares being created, but not in relation to how big the -
+// grid containers dimensions are
