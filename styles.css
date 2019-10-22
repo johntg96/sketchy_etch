@@ -13,14 +13,16 @@ body {
 #gridContainer {
 	margin-left: auto;
 	margin-right: auto;
-	width: 40em;
-	height: 40em;
+	width: 50em;
+	height: 50em;
+	border: .3em solid green;
 }
 
 .gridSquare {
 	background-color: black;
 	float: left;
 	border: .1em solid #565656;
+	box-sizing: border-box;
 	
 }
 

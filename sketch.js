@@ -6,8 +6,8 @@ function createGrid(x) {
 		for (columns = 0; columns < x; columns++) {
 			var square = document.createElement('div');
 			square.classList.add('gridSquare');
-			var dynamicW = 30/x + "em";
-			var dynamicH = 30/x + "em";
+			var dynamicW = 50 / x + "em";
+			var dynamicH = 50 / x + "em";
 			square.style.width = dynamicW;
 			square.style.height = dynamicH;
 			container.appendChild(square);
@@ -15,7 +15,7 @@ function createGrid(x) {
 	}
 }
 
-createGrid(20);
+createGrid(40);
 
 
 // TO DO:
