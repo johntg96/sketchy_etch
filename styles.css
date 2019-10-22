@@ -23,9 +23,12 @@ body {
 	float: left;
 	border: .1em solid #565656;
 	box-sizing: border-box;
-	
 }
 
 .gridSquare:hover {
 	background-color: red;
+}
+
+.drawn {
+	background-color: green;
 }

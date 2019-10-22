@@ -1,22 +1,25 @@
 // sketch.js
 const container = document.querySelector('#gridContainer');
 
-function createGrid(x) {
-	for (rows = 0; rows < x; rows++) {
-		for (columns = 0; columns < x; columns++) {
-			var square = document.createElement('div');
-			square.classList.add('gridSquare');
-			var dynamicW = 50 / x + "em";
-			var dynamicH = 50 / x + "em";
-			square.style.width = dynamicW;
-			square.style.height = dynamicH;
-			container.appendChild(square);
-		}
-	}
+function createGrid(gridSize) {
+	const dynamicW = 50 / gridSize + "em";
+	const dynamicH = 50 / gridSize + "em";
+
+	for (boxNum = 0; boxNum < gridSize * gridSize; boxNum++) {
+		var square = document.createElement('div');
+		square.style.cssText = 'height: ' + dynamicH + '; width: ' + dynamicW + ';';
+		square.classList.add('gridSquare');
+		square.id = "square" + boxNum;
+		square.setAttribute('onmouseover', 'changeColor(this.id)');
+		container.appendChild(square);
+	}	
 }
 
-createGrid(40);
+createGrid(60);
 
+function changeColor(id) {
+	document.querySelector('#' + String(id)).style.backgroundColor = "green";
+}
 
 // TO DO:
 // figure out how to dynamically size squares in grid..
