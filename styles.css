@@ -1,13 +1,13 @@
 /* styles.css */
 
 body {
-	background-color: #2D2E49;
+	background-image: radial-gradient(#750404, #141414);
 }
 
 .mainHead {
 	text-align: center;
-	font-family: arial;
-	color: #C6C6C6;
+	font-family: 'Press Start 2P', arial;
+	color: #D9D9D9;
 }
 
 #gridContainer {
@@ -15,20 +15,26 @@ body {
 	margin-right: auto;
 	width: 50em;
 	height: 50em;
-	border: .3em solid green;
+	border: .3em solid #AA0006;
+	border-radius: .5em;
+	-webkit-box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.75);
 }
 
 .gridSquare {
 	background-color: black;
 	float: left;
-	border: .1em solid #565656;
+	/*border: .05em solid #9C9C9C;*/
 	box-sizing: border-box;
 }
 
-.gridSquare:hover {
-	background-color: red;
+@-webkit-keyframes colorChange {
+	0% { background-color: white; }
+	100% { background-color: #C70202; }
 }
 
 .drawn {
-	background-color: green;
+	-webkit-animation:colorChange 0.5s;
+	background-color: #C70202;
 }
