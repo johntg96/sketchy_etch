@@ -29,12 +29,16 @@ body {
 	box-sizing: border-box;
 }
 
-@-webkit-keyframes colorChange {
-	0% { background-color: white; }
-	100% { background-color: #C70202; }
+.gridSquare:hover {
+	background-color: white;
 }
 
+/*@-webkit-keyframes colorChange {
+	0% { background-color: white; }
+	100% { background-color: #C70202; }
+}*/
+
 .drawn {
-	-webkit-animation:colorChange 0.5s;
+	/*-webkit-animation:colorChange 0.5s;*/
 	background-color: #C70202;
 }

@@ -14,7 +14,7 @@ function createGrid(gridSize) {
 	}	
 }
 
-createGrid(50);
+createGrid(16);
 
 function draw(id) {
 	document.querySelector('#' + String(id)).classList.add('drawn');
@@ -22,6 +22,4 @@ function draw(id) {
 
 // TO DO:
 // add grid size creation button
-// add ability for user to pick a drawing color
-// style page better
-// make page dynamic and mobile friendly
+// add grid reset button
