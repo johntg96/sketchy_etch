@@ -14,7 +14,7 @@ function createGrid(gridSize) {
 	}	
 }
 
-createGrid(16);
+createGrid(50);
 
 function draw(id) {
 	document.querySelector('#' + String(id)).classList.add('drawn');
