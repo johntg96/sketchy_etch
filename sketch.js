@@ -14,11 +14,21 @@ function createGrid(gridSize) {
 	}	
 }
 
-createGrid(50);
+createGrid(40);
 
 function draw(id) {
 	document.querySelector('#' + String(id)).classList.add('drawn');
 }
+
+function reset(newGridSize) {
+	// reset grid using this function..
+	// delete all squares and re-run 'createGrid' function
+}
+
+document.querySelector('#reset').addEventListener('click', function(){
+	const newGrid = prompt('Enter size of grid: ');
+	reset(newGridSize);
+});
 
 // TO DO:
 // add grid size creation button

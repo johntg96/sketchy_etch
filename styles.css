@@ -5,16 +5,21 @@ body {
 }
 
 .mainHead {
+	margin-top: 1em;
 	text-align: center;
 	font-family: 'Press Start 2P', arial;
 	font-size: 1.5em;
 	color: #D9D9D9;
 }
 
+#buttons {
+	text-align: center;
+}
+
 #gridContainer {
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 3em;
+	margin-top: 2em;
 	margin-bottom: 2em;
 	width: 50em;
 	height: 50em;
