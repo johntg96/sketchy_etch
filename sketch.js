@@ -1,8 +1,9 @@
 // sketch.js
-const container = document.querySelector('#gridContainer');
+var container = document.querySelector('#gridContainer');
+var gridSize = 16;
 
 function createGrid(gridSize) {
-	const dynamicSize = 50 / gridSize + "em";
+	const dynamicSize = 45 / gridSize + "em";
 
 	for (boxNum = 0; boxNum < gridSize * gridSize; boxNum++) {
 		var square = document.createElement('div');
@@ -14,22 +15,25 @@ function createGrid(gridSize) {
 	}	
 }
 
-createGrid(40);
+createGrid(gridSize);
 
 function draw(id) {
 	document.querySelector('#' + String(id)).classList.add('drawn');
 }
 
-function reset(newGridSize) {
+function reset(sizeOfGrid) {
 	// reset grid using this function..
 	// delete all squares and re-run 'createGrid' function
+	document.querySelectorAll('.gridSquare').forEach(e => e.remove());
+	createGrid(gridSize);
 }
 
 document.querySelector('#reset').addEventListener('click', function(){
-	const newGrid = prompt('Enter size of grid: ');
-	reset(newGridSize);
+	reset(gridSize);
 });
 
-// TO DO:
-// add grid size creation button
-// add grid reset button
+document.querySelector('#new').addEventListener('click', function(){
+	var newGridSize = prompt('Enter size of new grid: ');
+	gridSize = newGridSize;
+	reset(gridSize);
+});
