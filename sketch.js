@@ -1,6 +1,6 @@
 // sketch.js
 var container = document.querySelector('#gridContainer');
-var gridSize = 16;
+var gridSize = 8;
 
 function createGrid(gridSize) {
 	const dynamicSize = 45 / gridSize + "em";
@@ -33,7 +33,7 @@ document.querySelector('#reset').addEventListener('click', function(){
 });
 
 document.querySelector('#new').addEventListener('click', function(){
-	var newGridSize = prompt('Enter size of new grid: ');
+	var newGridSize = prompt('Size of new grid will be "x * x"\n\nEnter size of new grid (x): ');
 	gridSize = newGridSize;
 	reset(gridSize);
 });
