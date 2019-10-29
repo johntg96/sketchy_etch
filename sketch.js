@@ -37,3 +37,9 @@ document.querySelector('#new').addEventListener('click', function(){
 	gridSize = newGridSize;
 	reset(gridSize);
 });
+
+
+// TO DO
+// Optimize! The goal of this project has been acheived..
+// however, extreme lag when resetting grid is apparent.
+// Figure out how to refactor code to be more efficient.
